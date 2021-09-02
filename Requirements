@@ -1,0 +1,11 @@
+Requirements
+
+The codebase is implemented in Python 3.6.13. package versions used for development are just below.
+
+NVIDIA driver Verison    470.63.01
+cudatoolkit              10.0.130
+cuDNN                    7.6.5
+Tensorflow-gpu           1.14.0
+tensorflow-probability   0.7
+trfl                     1.1
+numpy                    1.16.4
