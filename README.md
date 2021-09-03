@@ -12,6 +12,28 @@ Efficient emergency evacuation is crucial for survival. However, it is not clear
 
 ## How to use
 
+We used a particle dynamics model to train agents to find the fastest path to evacuate.
+There are many available arguments.
+
+| Argument                 | Type     | Default    | Description                                                  |
+| ------------------------ | -------- | ---------- | ------------------------------------------------------------ |
+| num_episodes             | int      | 10000      | max number of episodes to learn from                         |
+| max_steps                | int      | 10000      | max steps in an episode                                      |
+| gamma                    | float    | 0.999      | future reward discount                                       |
+| memory_size              | int      | 1000       | memory capacity                                              |
+| batch_size               | int      | 50         | Batch size                                                   |
+| explore_start            | float    | 1.0        | exploration probability at start                             |
+| explore_stop             | float    | 0.1        | minimum exploration probability                              |
+| num_agent                | int      | 1          | how many workers for the training                            |
+| update_target_every      | int      | 1          | target update frequency                                      |
+| tau                      | float    | 0.1        | target update factor                                         |
+| save_step                | int      | 1000       | steps to save the model                                      |
+| train_step               | int      | 1          | steps to train the model                                     |
+| learning_rate            | float    | 1e-04      | Learning rate to use                                         |
+| Cfg_save_freq            | int      | 100        | Cfg save frequency (episode)                                 |
+
+
+
 ### Setup
 
 Please check the requiremnts document to setup the environment. The versions of main package are as following.
@@ -47,20 +69,16 @@ There are many available arguments.
 | gamma                    | float    | 0.999      | future reward discount                                       |
 | memory_size              | int      | 1000       | memory capacity                                              |
 | batch_size               | int      | 50         | Batch size                                                   |
-| samples_per_sequence     | int      | 10         | How may training points to generate from each simulation sequence |
-| experiment_name          | str      | 'dummy'    | Experiment name - used for building the experiment folder    |
-| normalizer_type          | str      | 'normal'   | how to normalize the images [normal, m1to1 (-1 to 1), none]  |
-| num_workers              | int      | 8          | how many workers for the dataloader                          |
-| seed                     | int      | 12345      | Seed to use for random number generator for experiment       |
-| seed_everything          | str2bool | True       | Use seed for everything random (numpy, pytorch, python)      |
-| debug                    | str2bool | False      | For debugging purposes                                       |
-| weight_decay_coefficient | float    | 1e-05      | Weight decay to use for Adam                                 |
+| explore_start            | float    | 1.0        | exploration probability at start                             |
+| explore_stop             | float    | 0.1        | minimum exploration probability                              |
+| num_agent                | int      | 1          | how many workers for the training                            |
+| update_target_every      | int      | 1          | target update frequency                                      |
+| tau                      | float    | 0.1        | target update factor                                         |
+| save_step                | int      | 1000       | steps to save the model                                      |
+| train_step               | int      | 1          | steps to train the model                                     |
 | learning_rate            | float    | 1e-04      | Learning rate to use                                         |
-| scheduler_patience       | int      | 7          | Epoch patience before reducing learning_rate                 |
-| scheduler_factor         | float    | 0.1        | Factor to reduce learning_rated                              |
-| continue_experiment      | str2bool | False      | Whether the experiment should continue from the last epoch   |
-| back_and_forth           | bool     | False      | If training will be with predicting both future and past     |
-| reinsert_frequency       | int      | 10         | LSTM: how often to use the reinsert mechanism                |
+| Cfg_save_freq            | int      | 100        | Cfg save frequency (episode)                                 |
+
 
 
 ### Test
