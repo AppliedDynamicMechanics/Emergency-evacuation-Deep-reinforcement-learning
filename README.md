@@ -116,7 +116,7 @@ Available arguments:
 | max_steps                | int      | 10000      | max steps in an episode                                      |
 | Cfg_save_freq            | int      | 1          | Cfg save frequency (episode)                                 |
 | cfg_save_step            | int      | 2          | Cfg save frequency (step)                                    |
-| arrow_len                | float    | 0.07       | Cfg save frequency (step)                                    |
+| arrow_len                | float    | 0.07       | the arrow length in optimal distribution figure              |
 
 ## Cite
 
