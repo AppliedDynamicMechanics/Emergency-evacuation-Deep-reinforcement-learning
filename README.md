@@ -3,7 +3,7 @@ Deep reinforcement learning with a particle dynamics environment applied to emer
 
 About
 We develop a deep reinforcement learning algorithm in association with a particle dynamics model to train agents to find the fastest path to evacuate. This report accompanies the 
-Deep reinforcement learning with a particle dynamics environment applied to emergency evacuation of a room with obstacles
+[Deep reinforcement learning with a particle dynamics environment applied to emergency evacuation of a room with obstacles](https://www.sciencedirect.com/science/article/abs/pii/S0378437121001175)
 
 
 Abstract
