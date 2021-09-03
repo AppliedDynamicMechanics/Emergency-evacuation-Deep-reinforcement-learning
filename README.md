@@ -37,13 +37,33 @@ There are many available arguments.
 
 Please check the requiremnts document to setup the environment. The versions of main package are as following.
 
+`
 NVIDIA driver Verison    470.63.01
+`
+
+`
 cudatoolkit              10.0.130
+`
+
+`
 cuDNN                    7.6.5
+`
+
+`
 Tensorflow-gpu           1.14.0
+`
+
+`
 tensorflow-probability   0.7
+`
+
+`
 trfl                     1.1
+`
+
+`
 numpy                    1.16.4
+`
 
 Install the requirements with your package manager, i.e.  ` pip install tensorflow-probability==0.7`
 
