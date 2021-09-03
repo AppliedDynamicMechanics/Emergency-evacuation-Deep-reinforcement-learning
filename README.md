@@ -86,7 +86,7 @@ There are many available arguments.
 | max_steps                | int      | 10000      | max steps in an episode                                      |
 | gamma                    | float    | 0.999      | future reward discount                                       |
 | memory_size              | int      | 1000       | memory capacity                                              |
-| batch_size               | int      | 50         | Batch size                                                   |
+| batch_size               | int      | 50         | batch size                                                   |
 | explore_start            | float    | 1.0        | exploration probability at start                             |
 | explore_stop             | float    | 0.1        | minimum exploration probability                              |
 | num_agent                | int      | 1          | how many workers for the training                            |
