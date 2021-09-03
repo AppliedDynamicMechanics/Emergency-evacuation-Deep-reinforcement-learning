@@ -32,7 +32,6 @@ There are many available arguments.
 
 
 
-
 ### Setup
 
 Please check the requiremnts document to setup the environment. The versions of main package are as following.
@@ -102,19 +101,22 @@ There are many available arguments.
 
 ### Test
 
-This is used to assess the generalization capabilities of a model. The test are run on all the datasets that are provided above. If you want to change that you'll need to change the dataloaders in the `evaluate_experiment` function in `utils/experiment_evaluatory.py`,
+This is used to assess the generalization capabilities of a model. The test run on the optimal policy learned from a single agent. We have put the a trained policy in the model folder. If you want to train a new policy, you need to run the train file firstly.
 
-`python test_network.py --experiment_name unet_wd_1e-5`
+You can use the test document to test the result of the trained model. You can check the optimal distribution figure by using `matplotlib`. You can also check the test Cfg in the test folder by using `Ovito 2.9.0`.
+
+`python Evacuation_Continuum_DQN_Fully_test`
 
 Available arguments:
 
 | Argument                 | Type     | Default    | Description                                                  |
 | ------------------------ | -------- | ---------- | ------------------------------------------------------------ |
-| test_starting_point      | int      | 15         | Which frame to start the test                                |
-| num_total_output_frames  | int      | 80         | How many frames to predict to the future during evaluation   |
-| get_sample_predictions   | str2bool | True       | Print sample predictions figures or not                      |
-| num_output_keep_frames   | int      | 20         | How many frames to keep from each propagation in RNN models |
-| refeed                   | str2bool | False      | Whether to use the refeed mechanism in RNNs                  |
+| test_episodes            | int      | 1          | max number of episodes to test                               |
+| Number_Agent             | int      | 80         | How many agents to evacuate from the cell space during test  |
+| max_steps                | int      | 10000      | max steps in an episode                                      |
+| Cfg_save_freq            | int      | 1          | Cfg save frequency (episode)                                 |
+| cfg_save_step            | int      | 2          | Cfg save frequency (step)                                    |
+| arrow_len                | float    | 0.07       | Cfg save frequency (step)                                    |
 
 ## Cite
 
