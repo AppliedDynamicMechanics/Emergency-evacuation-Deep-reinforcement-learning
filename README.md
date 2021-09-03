@@ -17,20 +17,19 @@ There are many available arguments.
 
 | Argument                 | Type     | Default    | Description                                                  |
 | ------------------------ | -------- | ---------- | ------------------------------------------------------------ |
-| num_episodes             | int      | 10000      | max number of episodes to learn from                         |
-| max_steps                | int      | 10000      | max steps in an episode                                      |
-| gamma                    | float    | 0.999      | future reward discount                                       |
-| memory_size              | int      | 1000       | memory capacity                                              |
-| batch_size               | int      | 50         | Batch size                                                   |
-| explore_start            | float    | 1.0        | exploration probability at start                             |
-| explore_stop             | float    | 0.1        | minimum exploration probability                              |
-| num_agent                | int      | 1          | how many workers for the training                            |
-| update_target_every      | int      | 1          | target update frequency                                      |
-| tau                      | float    | 0.1        | target update factor                                         |
-| save_step                | int      | 1000       | steps to save the model                                      |
-| train_step               | int      | 1          | steps to train the model                                     |
-| learning_rate            | float    | 1e-04      | Learning rate to use                                         |
-| Cfg_save_freq            | int      | 100        | Cfg save frequency (episode)                                 |
+| door_size                | float    | 1.0        | size of door                                                 |
+| agent_size               | float    | 0.5        | size of agent (particle)                                     |
+| reward                   | float    | -0.1       | reward                                                       |
+| end_reward               | float    | 0          | end_reward                                                   |
+| dis_lim                  | float    | 0.75       | distance from the exit which the agent is regarded as left   |
+| action_force             | float    | 1.0        | unit action force                                            |
+| desire_velocity          | float    | 2.0        | desire velocity                                              |
+| relaxation_time          | float    | 0.5        | relaxation_time                                              |
+| delta_t                  | float    | 0.1        | time difference of simulation                                |
+| xmax                     | float    | 50.0       | x-direction size of the cell space                           |
+| ymax                     | float    | 50.0       | y-direction size of the cell space                           |
+| cfg_save_step            | int      | 5          | time steps interval for saving Cfg file                      |
+
 
 
 
