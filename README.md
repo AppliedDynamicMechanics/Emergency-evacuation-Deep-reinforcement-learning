@@ -14,7 +14,16 @@ Efficient emergency evacuation is crucial for survival. However, it is not clear
 
 ### Setup
 
-Please check the requiremnts document to setup the environment.
+Please check the requiremnts document to setup the environment. The versions of main package are as following.
+
+NVIDIA driver Verison    470.63.01
+cudatoolkit              10.0.130
+cuDNN                    7.6.5
+Tensorflow-gpu           1.14.0
+tensorflow-probability   0.7
+trfl                     1.1
+numpy                    1.16.4
+
 Install the requirements with your package manager, i.e.  ` pip install tensorflow-probability==0.7`
 
 
@@ -28,20 +37,16 @@ or
 `
 python Evacuation_Continuum_3Exits_Ob_DQN_Fully
 `
-The following trains a U-Net with a specific weight decay coefficient:
-
-`python train_network.py --experiment_name unet_wd_1e-5 --model_type --weight_decay_coefficient 1e-5 `
 
 There are many available arguments.
 
 | Argument                 | Type     | Default    | Description                                                  |
 | ------------------------ | -------- | ---------- | ------------------------------------------------------------ |
-| model_type               | str      | NA         | Network architecture for training [ar_lstm convlstm, resnet, unet, predrnn] |
-| num_epochs               | int      | 50         | The experiment's epoch budget                                |
-| num_input_frames         | int      | 5          | How many frames to insert initially                          |
-| num_output_frames        | int      | 20         | How many framres to predict in the future                    |
-| dataset                  | str      | 'original' | select which dataset to use [original, fixed_tub]             |
-| batch_size               | int      | 16         | Batch size                                                   |
+| num_episodes             | int      | 10000      | max number of episodes to learn from                         |
+| max_steps                | int      | 10000      | max steps in an episode                                      |
+| gamma                    | float    | 0.999      | future reward discount                                       |
+| memory_size              | int      | 1000       | memory capacity                                              |
+| batch_size               | int      | 50         | Batch size                                                   |
 | samples_per_sequence     | int      | 10         | How may training points to generate from each simulation sequence |
 | experiment_name          | str      | 'dummy'    | Experiment name - used for building the experiment folder    |
 | normalizer_type          | str      | 'normal'   | how to normalize the images [normal, m1to1 (-1 to 1), none]  |
@@ -50,7 +55,7 @@ There are many available arguments.
 | seed_everything          | str2bool | True       | Use seed for everything random (numpy, pytorch, python)      |
 | debug                    | str2bool | False      | For debugging purposes                                       |
 | weight_decay_coefficient | float    | 1e-05      | Weight decay to use for Adam                                 |
-| learning_rate            | float    | 1e-04      | Learning rate to use for Adam                                |
+| learning_rate            | float    | 1e-04      | Learning rate to use                                         |
 | scheduler_patience       | int      | 7          | Epoch patience before reducing learning_rate                 |
 | scheduler_factor         | float    | 0.1        | Factor to reduce learning_rated                              |
 | continue_experiment      | str2bool | False      | Whether the experiment should continue from the last epoch   |
