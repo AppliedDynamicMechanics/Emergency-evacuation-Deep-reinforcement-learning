@@ -1,0 +1,4 @@
+tensorflow==1.15
+tensorflow-probability==0.7
+trfl==1.1
+matplotlib
