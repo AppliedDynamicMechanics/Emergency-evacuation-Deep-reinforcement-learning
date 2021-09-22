@@ -644,7 +644,7 @@ class Cell_Space:
                         costheta = costheta_tmp
                         dr_action = action
                         
-#                p.acc += 1/relaxation_time * desire_velocity *dr_unit        
+ 
                 p.acc += 1/relaxation_time * desire_velocity * dr_action
         
         self.Integration(1)        
